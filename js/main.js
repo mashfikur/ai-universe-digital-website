@@ -12,19 +12,17 @@ const loadData = async () => {
 
 loadData();
 
+const showData = (tools) => {
+  const cardContainer = document.getElementById("card-container");
 
-const showData= (tools)=>{
+  tools.forEach((tool) => {
+    console.log(tool.name);
 
-    const cardContainer=document.getElementById('card-container')
+    const div = document.createElement("div");
 
-    tools.forEach((tool)=>{
-        console.log(tool.name)
+    div.classList = "card w-[30rem] h-[30rem] bg-gray-100 shadow-xl";
 
-        const div = document.createElement('div')
-
-        div.classList="card w-96 bg-gray-100 shadow-xl"
-
-        div.innerHTML=`
+    div.innerHTML = `
         <figure><img src="${tool.image}" alt="Tools" /></figure>
         <div class="card-body">
           <h2 class="card-title">
@@ -37,7 +35,12 @@ const showData= (tools)=>{
         
         `;
 
-        cardContainer.appendChild(div)
-    })
+    cardContainer.appendChild(div);
+  });
+};
 
-}
+const handleShowMore = () => {
+  const showMoreButton = document.getElementById("show-more-btn");
+
+  showMoreButton.classList.remove("hidden");
+};
