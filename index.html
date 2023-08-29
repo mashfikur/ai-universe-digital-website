@@ -18,13 +18,26 @@
 
     <main class="container mx-auto my-12">
       <section>
-        <div id="card-container" class="grid lg:grid-cols-3 gap-6"></div>
+        <div
+          id="card-container"
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
+        ></div>
 
         <div id="show-more-btn" class="text-center mt-12 hidden">
-          <button class="btn btn-error">See More</button>
+          <button onclick="showMore()" class="btn btn-error">See More</button>
         </div>
       </section>
     </main>
+
+    <!-- icon scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <script src="js/main.js"></script>
   </body>
